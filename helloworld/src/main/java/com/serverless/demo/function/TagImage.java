@@ -51,7 +51,8 @@ public class TagImage implements RequestHandler<S3Event, Void> {
 
             try {
                 List<Label> labels = rekognitionClient.detectLabels(request).getLabels();
-                // Add the labels tag to the object
+                // Add the labels tag to the object 
+                //adding comments to the file
                 List<Tag> newTags = new ArrayList<>();
 
                 if (labels.isEmpty()) {
